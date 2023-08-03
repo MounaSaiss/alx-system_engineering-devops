@@ -1,6 +1,2 @@
 #!/bin/bash
-# Get the permissions of "olleh" using stat command
-permissions=$(stat -c %a olleh)
-
-# Apply the same permissions to "hello"
-chmod $permissions hello
+chmod --reference=olleh hello
